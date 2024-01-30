@@ -15,5 +15,10 @@ jobs:
       - name: List files in the repository
         run: |
           ls ${{ github.workspace }}
+      - name: Set up Python 3.10
+        uses: actions/setup-python@v3
+        with:
+          python-version: "3.10"
+      - run: python testing.py
       - run: echo "🍏 This job's status is ${{ job.status }}."
       
